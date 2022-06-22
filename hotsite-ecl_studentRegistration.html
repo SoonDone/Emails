@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @font-face {
+        font-family: 'GothamHTF-Black';
+        src: url('https://static.novva.tech/letters/base/assets_letters/letter2_6/assets/fonts/GothamHTF-Black.otf');
+      }
+
+      @font-face {
+        font-family: 'GothamHTF-Book';
+        src: url('https://static.novva.tech/letters/base/assets_letters/letter2_6/assets/fonts/gotham-book-webfont.woff2');
+      }
+
+      @font-face {
+        font-family: 'GothamHTF-Bold';
+        src: url('https://static.novva.tech/letters/base/assets_letters/letter2_6/assets/fonts/GothamHTF-Bold.otf');
+      }
+    </style>
+  </head>
+
+  <body style="margin: 0">
+    <div
+      style="
+        padding: 28px 0px 15px 0px;
+        background-color: #f7f8fa;
+        width: 700px;
+        height: 100%;
+        display: table;
+        margin: 0 auto;
+        font-family: 'GothamHTF-Book', raleway, arial, verdana, tahoma;
+      "
+    >
+      <table
+        width="600"
+        align="center"
+        border="0"
+        cellpadding="30"
+        cellspacing="0"
+      >
+        <tr>
+          <td align="center">
+            <img src="https://static.novva.tech/letters/ecl/logo.png" />
+          </td>
+        </tr>
+      </table>
+
+      <table
+        width="600"
+        align="center"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+      >
+        <tr>
+          <td>
+            <img
+              src="https://static.novva.tech/letters/ecl/top.png"
+              align="left"
+            />
+          </td>
+        </tr>
+      </table>
+
+      <table
+        width="600"
+        align="center"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+      >
+        <tr>
+          <td
+            style="
+              line-height: 1.8;
+              padding: 40px 40px 30px 40px;
+              font-size: 18px;
+              font-family: 'GothamHTF-Book', raleway, arial, verdana, tahoma;
+            "
+            bgcolor="#FFFFFF"
+            align="center"
+          >
+            <p>
+              <strong
+                ><span style="color: #fe5101">Hello</span>, <%= student.name
+                %></strong
+              >
+            </p>
+
+            <p>
+              We're happy to inform you that you are now confirmed to attend the
+              <strong><%= event.title %></strong>.
+            </p>
+
+            <p>
+              See below your new login details, please save this for your
+              participation at the event.
+            </p>
+          </td>
+        </tr>
+      </table>
+
+      <table
+        width="600"
+        align="center"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+      >
+        <tr>
+          <td
+            style="
+              padding: 20px 40px 30px 40px;
+              font-size: 18px;
+              font-family: 'GothamHTF-Book', raleway, arial, verdana, tahoma;
+            "
+            bgcolor="#FFFFFF"
+            align="center"
+          >
+            <div style="font-size: 35px; padding-bottom: 20px" align="center">
+              EVENT
+              <strong
+                style="
+                  font-family: 'GothamHTF-Black', raleway, arial, verdana,
+                    tahoma;
+                "
+                >DETAILS</strong
+              >
+            </div>
+
+            <div style="padding: 15px; background-color: #f4f4f4">
+              <div
+                style="
+                  padding: 10px 20px 10px 20px;
+                  border-radius: 10px;
+                  border: 1px solid black;
+                  border-style: dashed;
+                "
+              >
+                <table>
+                  <tr>
+                    <td
+                      style="
+                        font-size: 14px;
+                        font-family: 'GothamHTF-Book', raleway, arial, verdana,
+                          tahoma;
+                      "
+                    >
+                      <div style="padding: 5px">
+                        <strong><%= event.title %></strong>
+                      </div>
+                      <div style="padding: 5px">
+                        <img
+                          src="https://static.novva.tech/letters/ecl/calendar.png"
+                        />
+                        <%= time.date %>
+                      </div>
+                      <div style="padding: 5px">
+                        <img
+                          src="https://static.novva.tech/letters/ecl/time.png"
+                        />
+                        <%= time.start %> - <%= time.end %> (<%= time.timezone
+                        %>)
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <a
+              href="<%= `https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&text=${event.title}&dates=${time.dateStartToCalendar}/${time.dateEndToCalendar}&location=${event.hotsiteStudents}&sf=true&output=xml` %>"
+              style="
+                background-color: #fc6322;
+                padding: 15px 25px 15px 25px;
+                border-radius: 5px;
+                color: #ffffff;
+                font-size: 15px;
+                font-weight: bold;
+                text-decoration: none;
+                margin-top: 35px;
+                margin-bottom: 5px;
+                display: table;
+                font-style: italic;
+                font-family: raleway, arial, verdana, tahoma;
+              "
+            >
+              ADD TO YOUR CALENDAR
+            </a>
+          </td>
+        </tr>
+      </table>
+
+      <table
+        width="600"
+        align="center"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+      >
+        <tr>
+          <td
+            style="
+              padding: 20px 40px 30px 40px;
+              font-size: 18px;
+              font-family: 'GothamHTF-Book', raleway, arial, verdana, tahoma;
+            "
+            bgcolor="#FFFFFF"
+            align="center"
+          >
+            <div style="font-size: 35px; padding-bottom: 20px" align="center">
+              YOUR
+              <strong
+                style="
+                  font-family: 'GothamHTF-Black', raleway, arial, verdana,
+                    tahoma;
+                "
+                >LOGIN DETAILS</strong
+              >
+            </div>
+
+            <div style="padding: 15px; background-color: #f4f4f4">
+              <div
+                style="
+                  font-family: 'GothamHTF-Book', raleway, arial, verdana, tahoma;
+                  font-size: 14px;
+                  padding: 10px 20px 10px 20px;
+                  border-radius: 10px;
+                  border: 1px solid black;
+                  border-style: dashed;
+                "
+              >
+                <p>
+                  <strong>Email:</strong>
+                  <%= student.email %>
+                </p>
+                <p>You will use the password you created when you registered</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <table
+        width="600"
+        align="center"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+      >
+        <tr>
+          <td
+            style="
+              padding: 40px 40px 30px 40px;
+              font-size: 18px;
+              font-family: 'GothamHTF-Book', raleway, arial, verdana, tahoma;
+            "
+            bgcolor="#FFFFFF"
+            align="center"
+          >
+            <div
+              style="
+                padding: 40px 0px 40px 0px;
+                background-repeat: no-repeat;
+                background: url('https://static.novva.tech/letters/ecl/box.png');
+              "
+            >
+              <div style="font-size: 35px; margin-top: 20px" align="center">
+                HOW TO JOIN THE <br />
+                <strong
+                  style="
+                    font-family: 'GothamHTF-Black', raleway, arial, verdana,
+                      tahoma;
+                  "
+                  >VIRTUAL FAIR</strong
+                >
+              </div>
+
+              <table style="margin-top: 20px; font-size: 14px">
+                <tr>
+                  <td
+                    valign="middle"
+                    width="40"
+                    style="
+                      font-family: 'GothamHTF-Book', raleway, arial, verdana,
+                        tahoma;
+                    "
+                  >
+                    <div
+                      style="
+                        color: #fe5101;
+                        font-weight: bold;
+                        border-radius: 50%;
+                        font-size: 12px;
+                        text-align: center;
+                        width: 20px;
+                        height: 20px;
+                        line-height: 20px;
+                        border: 3px solid #fe5101;
+                        font-family: 'GothamHTF-Book', raleway, arial, verdana,
+                          tahoma;
+                      "
+                    >
+                      1
+                    </div>
+                  </td>
+                  <td
+                    valign="middle"
+                    style="
+                      font-family: 'GothamHTF-Book', raleway, arial, verdana,
+                        tahoma;
+                    "
+                  >
+                    On the day and time of the event, access:<br /><strong>
+                      <a
+                        style="color: #fe5101"
+                        href="<%= event.hotsiteStudents %>"
+                        ><%= event.hotsiteStudents.replace('https://', '') %></a
+                      >
+                    </strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="15"></td>
+                </tr>
+                <tr>
+                  <td valign="middle">
+                    <div
+                      style="
+                        color: #fe5101;
+                        font-weight: bold;
+                        border-radius: 50%;
+                        font-size: 12px;
+                        text-align: center;
+                        width: 20px;
+                        height: 20px;
+                        line-height: 20px;
+                        border: 3px solid #fe5101;
+                        font-family: 'GothamHTF-Book', raleway, arial, verdana,
+                          tahoma;
+                      "
+                    >
+                      2
+                    </div>
+                  </td>
+                  <td
+                    valign="middle"
+                    style="
+                      font-family: 'GothamHTF-Book', raleway, arial, verdana,
+                        tahoma;
+                    "
+                  >
+                    Click on the button <strong>"Enter the fair now"</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="15"></td>
+                </tr>
+                <tr>
+                  <td valign="middle">
+                    <div
+                      style="
+                        color: #fe5101;
+                        font-weight: bold;
+                        border-radius: 50%;
+                        font-size: 12px;
+                        text-align: center;
+                        width: 20px;
+                        height: 20px;
+                        line-height: 20px;
+                        border: 3px solid #fe5101;
+                        font-family: 'GothamHTF-Book', raleway, arial, verdana,
+                          tahoma;
+                      "
+                    >
+                      3
+                    </div>
+                  </td>
+                  <td
+                    valign="middle"
+                    style="
+                      font-family: 'GothamHTF-Book', raleway, arial, verdana,
+                        tahoma;
+                    "
+                  >
+                    Enter the email and password you registered with.
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <table
+        width="600"
+        align="center"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+      >
+        <tr>
+          <td
+            style="
+              font-family: 'GothamHTF-Book', raleway, arial, verdana, tahoma;
+              padding: 10px 40px 30px 40px;
+              font-size: 18px;
+              line-height: 1.8;
+            "
+            bgcolor="#FFFFFF"
+            align="center"
+          >
+            <p>
+              If you have any technical questions regarding the <br />
+              event and the platform, please contact us at <br />
+              <a
+                href="mailto:<%= EMAILS.HELLO %>"
+                style="color: #fc6322; font-weight: bold"
+                ><%= EMAILS.HELLO %></a
+              >
+            </p>
+
+            <p style="margin-top: 40px">
+              See you there!<br />
+              <strong>
+                <span
+                  style="
+                    color: #fe5101;
+                    font-family: 'GothamHTF-Black', raleway, arial, verdana,
+                      tahoma;
+                  "
+                  >NOVVA</span
+                >
+                Connect</strong
+              >
+            </p>
+          </td>
+        </tr>
+      </table>
+      <p
+        style="
+          font-family: 'GothamHTF-Book', raleway, arial, verdana, tahoma;
+          text-align: center;
+          color: rgba(0, 0, 0, 0.2);
+          margin-bottom: 0;
+          font-size: 15px;
+        "
+      >
+        Follow us
+      </p>
+      <ul
+        style="
+          font-family: 'GothamHTF-Book', raleway, arial, verdana, tahoma;
+          text-align: center;
+          margin: 11px auto;
+          list-style: none;
+          padding: 0;
+        "
+      >
+        <li style="display: inline; margin-left: 5px">
+          <a
+            href="https://www.instagram.com/novvastudent"
+            target="_Blank"
+            style="text-decoration: none"
+          >
+            <img
+              src="https://static.novva.tech/letters/base/assets_letters/general/ico-instagram.png"
+            />
+          </a>
+        </li>
+        <li style="display: inline; margin-left: 5px">
+          <a
+            href="https://twitter.com/novvastudent"
+            target="_Blank"
+            style="text-decoration: none"
+          >
+            <img
+              src="https://static.novva.tech/letters/base/assets_letters/general/ico-twitter.png"
+            />
+          </a>
+        </li>
+        <li style="display: inline; margin-left: 5px">
+          <a
+            href="https://facebook.com/novvastudent"
+            target="_Blank"
+            style="text-decoration: none"
+          >
+            <img
+              src="https://static.novva.tech/letters/base/assets_letters/general/ico-facebook.png"
+            />
+          </a>
+        </li>
+        <li style="display: inline; margin-left: 5px">
+          <a
+            href="https://youtube.com/channel/UCdU0iwXu44yddUvf633702Q"
+            target="_Blank"
+            style="text-decoration: none"
+          >
+            <img
+              src="https://static.novva.tech/letters/base/assets_letters/general/ico-youtube.png"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
